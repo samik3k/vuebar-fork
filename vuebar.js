@@ -275,7 +275,7 @@
             var ruleExists = false;
             for(var i=0, l=sheet.rules.length; i<l; i++){
                 var rule = sheet.rules[i];
-                if (rule.selectorText == selector) {
+                if (rule.selectorText === selector) {
                     ruleExists = true;
                 }
             }
@@ -511,7 +511,7 @@
 
             // dragger enabled?
             var elNativeScrollbarWidth = getNativeScrollbarWidth(el.firstElementChild);
-            var overlayScrollbar = elNativeScrollbarWidth == 0;
+            var overlayScrollbar = elNativeScrollbarWidth === 0;
             state.draggerEnabled = ( (!overlayScrollbar) || state.config.overrideFloatingScrollbar ) ? 1 : 0;
 
             // setup scrollbar "state"
@@ -803,10 +803,10 @@
             var safari = !!window.safari || ((ua.toLowerCase().indexOf('safari') > -1) && (vendor.toLowerCase().indexOf('apple') > -1));
 
             // internet explorer
-            var ie8 = getIEVersion() == 8;
-            var ie9 = getIEVersion() == 9;
-            var ie10 = getIEVersion() == 10;
-            var ie11 = getIEVersion() == 11;
+            var ie8 = getIEVersion() === 8;
+            var ie9 = getIEVersion() === 9;
+            var ie10 = getIEVersion() === 10;
+            var ie11 = getIEVersion() === 11;
             var ie = ie8 || ie9 || ie10 || ie11;
 
             // is it mobile browser?
@@ -834,7 +834,7 @@
             Calculate scrollbar width in element
             - if the width is 0 it means the scrollbar is floated/overlayed
             - accepts "container" paremeter because ie & edge can have different
-              scrollbar behaviors for different elements using '-ms-overflow-style'
+            - scrollbar behaviors for different elements using '-ms-overflow-style'
         \*------------------------------------*/
         function getNativeScrollbarWidth(container) {
             var container = container ? container : document.body;
