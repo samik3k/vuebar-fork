@@ -205,7 +205,7 @@
             var state = getState(el);
 
             // setting dragger styles
-            state.dragger.style.height = parseInt( Math.round( state.barHeight)  ) + 'px';
+            state.dragger.style.height = parseInt( Math.round( state.barHeight) ) + 'px';
             state.dragger.style.top = parseInt( Math.round( state.barTop ) ) + 'px';
             //state.dragger.style.height = Math.ceil( state.barHeight ) + 'px';
             //state.dragger.style.top = Math.ceil( state.barTop ) + 'px';
